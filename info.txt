@@ -1,0 +1,13 @@
+
+-> -> Inicie o Repositório Git: Abra o Terminal integrado no VS Code (Ctrl + ').
+Execute os comandos para iniciar o controle de versão:
+
+git init
+echo "# Docker Python API" > README.md
+git add .
+git commit -m "Initial commit and project setup"
+
+-> -> Rodar a Aplicação com Docker Compose
+Agora, com o Docker Desktop aberto e funcionando, você pode subir toda a sua aplicação com um único comando no terminal do VS Code:
+
+docker compose up --build -d

@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    restart: always
+
+    # ATUALIZE ESTA SEÇÃO:
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=app.py  # Adiciona o nome do arquivo da aplicação Flask
+    
+    # ADICIONE ESTA SEÇÃO: 
+    # Usamos "flask run" no modo debug, que habilita o auto-reload
+    command: ["flask", "run", "--host", "0.0.0.0", "--port", "5000", "--debug"]

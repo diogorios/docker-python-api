@@ -1,0 +1,26 @@
+{
+    "name": "Python Flask Development Container",
+
+    // 1. Aponta para o seu arquivo docker-compose
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+
+    // 2. Aponta para o serviço que você quer usar (o 'web')
+    "service": "web",
+
+    // 3. Define onde o VS Code deve abrir o código dentro do contêiner
+    "workspaceFolder": "/app",
+
+    // 4. Extensões úteis que o VS Code instalará dentro do contêiner
+    "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "visualstudioexptteam.vscodeintellicode"
+    ],
+
+    // 5. Configurações extras para o VS Code dentro do contêiner
+    "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+    }
+}
